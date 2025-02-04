@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sol Lanches</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #4CAF50, #FFEB3B, #FF5722, #2196F3, #9C27B0);
+            background-size: 400% 400%;
+            animation: gradient 10s ease infinite;
+            color: #fff;
+            text-align: center;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-bottom: 5px solid #4CAF50;
+        }
+
+        h1 {
+            font-size: 2rem; /* Reduzido para telas menores */
+            margin: 0;
+            color: #FFEB3B;
+        }
+
+        .logo {
+            width: 150px; /* Reduzido para telas menores */
+            height: 150px; /* Reduzido para telas menores */
+            border-radius: 50%;
+            margin: 20px auto;
+            display: block;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .container {
+            padding: 10px; /* Reduzido o padding para telas menores */
+        }
+
+        .btn {
+            display: block;
+            width: 90%; /* Aumentado para ocupar mais espaço na tela */
+            max-width: 300px;
+            padding: 12px 20px; /* Ajustado o padding para telas menores */
+            margin: 10px auto;
+            font-size: 1.2rem; /* Reduzido o tamanho da fonte */
+            color: #fff;
+            background: #4CAF50;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: scale(1.05); /* Efeito de escala reduzido */
+        }
+
+        .btn-cardapio {
+            font-size: 1.5rem; /* Reduzido o tamanho da fonte */
+            padding: 15px 30px; /* Ajustado o padding */
+            background: #FF5722;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+        }
+
+        .btn-whatsapp:hover {
+            background: #128C7E;
+        }
+
+        .btn-localizacao {
+            background: #9C27B0;
+        }
+
+        .btn-localizacao:hover {
+            background: #7B1FA2;
+        }
+
+        .btn-pix {
+            background: #FFEB3B;
+            color: #000;
+        }
+
+        .btn-pix:hover {
+            background: #FDD835;
+        }
+
+        .btn-instagram {
+            background: linear-gradient(45deg, #405DE6, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45);
+            color: #fff;
+        }
+
+        .btn-instagram:hover {
+            background: linear-gradient(45deg, #405DE6, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45);
+            opacity: 0.9;
+        }
+
+        .carrossel {
+            width: 90%; /* Ajustado para ocupar mais espaço na tela */
+            max-width: 600px;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .carrossel img {
+            width: 100%;
+            display: none;
+            border-radius: 20px;
+        }
+
+        .carrossel img.ativa {
+            display: block;
+            animation: fade 1.5s;
+        }
+
+        @keyframes fade {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Estilos específicos para telas menores */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8rem; /* Tamanho da fonte ainda menor para telas pequenas */
+            }
+
+            .btn {
+                font-size: 1rem; /* Tamanho da fonte menor para botões */
+                padding: 10px 15px; /* Padding menor para botões */
+            }
+
+            .btn-cardapio {
+                font-size: 1.2rem; /* Tamanho da fonte menor para o botão do cardápio */
+                padding: 12px 20px; /* Padding menor para o botão do cardápio */
+            }
+
+            .carrossel {
+                width: 100%; /* Ocupa toda a largura da tela */
+                border-radius: 10px; /* Bordas mais arredondadas */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sol Lanches</h1>
+        <p>O melhor hambúrguer da cidade!</p>
+    </header>
+
+    <!-- Logo da Hamburgueria -->
+    <div class="logo">
+        <img src="img/logo sol lanches.jpg" alt="Logo Sol Lanches">
+    </div>
+
+    <div class="container">
+        <!-- Botão de Cardápio -->
+        <a href="https://whatsmenu.com.br/sollanchesespeciais" class="btn btn-cardapio">Cardápio</a>
+
+        <!-- Botão de WhatsApp -->
+        <a href="https://wa.me/5512991189175" class="btn btn-whatsapp">Fale Conosco no WhatsApp</a>
+
+        <!-- Botão de Localização -->
+        <a href="https://www.google.com/maps/search/Rua+Maria+Luiza+Salgado+172+Pra%C3%A7a+Do+Cisas,+Moreira+Cesar,+12420015+Pindamonhangaba-SP/@-22.9144,-45.3648,17z?hl=pt-BR&entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D" class="btn btn-localizacao">Como Chegar</a>
+
+        <!-- Botão de PIX -->
+        <button class="btn btn-pix" onclick="copiarPix()">PIX: (12) 99118-9175</button>
+
+        <!-- Botão do Instagram -->
+        <a href="https://www.instagram.com/sollanches10/" class="btn btn-instagram">Siga-nos no Instagram</a>
+    </div>
+
+    <!-- Carrossel de Imagens -->
+    <div class="carrossel">
+        <img src="img/caroseel1.PNG" alt="Hambúrguer 1" class="ativa">
+        <img src="img/carrosel2.PNG" alt="Hambúrguer 2">
+        <img src="img/carrosel 4.PNG" alt="Hambúrguer 3">
+    </div>
+
+    <script>
+        // Função para copiar o PIX
+        function copiarPix() {
+            const pix = "12991189175";
+            navigator.clipboard.writeText(pix)
+                .then(() => alert("PIX copiado: (12) 99118-9175"))
+                .catch(() => alert("Não foi possível copiar o PIX."));
+        }
+
+        // Carrossel automático
+        let index = 0;
+        const imagens = document.querySelectorAll('.carrossel img');
+
+        function trocarImagem() {
+            imagens[index].classList.remove('ativa');
+            index = (index + 1) % imagens.length;
+            imagens[index].classList.add('ativa');
+        }
+
+        setInterval(trocarImagem, 3000); // Troca a imagem a cada 3 segundos
+    </script>
+</body>
+</html>
