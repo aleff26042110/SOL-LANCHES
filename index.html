@@ -146,6 +146,14 @@
             opacity: 0.9;
         }
 
+        .btn-cartao {
+            background: #2196F3;
+        }
+
+        .btn-cartao:hover {
+            background: #1976D2;
+        }
+
         .carrossel {
             width: 90%;
             max-width: 600px;
@@ -226,6 +234,9 @@
 
         <!-- Botão do Instagram -->
         <a href="https://www.instagram.com/sollanches10/" class="btn btn-instagram">Siga-nos no Instagram</a>
+
+        <!-- Botão do Cartão Virtual -->
+        <a href="https://aleff26042110.github.io/sitealeff/" class="btn btn-cartao">Quero fazer meu cartão virtual</a>
     </div>
 
     <!-- Carrossel de Imagens -->
@@ -238,10 +249,10 @@
     <script>
         // Função para copiar o PIX
         function copiarPix() {
-            const pix = "12991189175";
-            navigator.clipboard.writeText(pix)
-                .then(() => alert("PIX copiado: (12) 99118-9175"))
-                .catch(() => alert("Não foi possível copiar o PIX."));
+            const pix = "12991189175"; // Número do PIX
+            navigator.clipboard.writeText(pix) // Copia o número para a área de transferência
+                .then(() => alert("Chave PIX copiada com sucesso!!")) // Exibe a mensagem de sucesso
+                .catch(() => alert("Erro ao copiar a chave PIX.")); // Exibe mensagem de erro, se houver
         }
 
         // Carrossel automático
